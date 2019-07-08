@@ -49,7 +49,6 @@ class RandomWordsState extends State<RandomWords> {
           color: alreadySaved ? Colors.red : null,
         ),
         onTap: () {
-          // Add 9 lines from here...
           setState(() {
             if (alreadySaved) {
               _saved.remove(pair);
@@ -68,7 +67,7 @@ class RandomWordsState extends State<RandomWords> {
 
           final index = i ~/ 2;
           if (index >= _suggestions.length) {
-            _suggestions.addAll(generateWordPairs().take(10)); /*4*/
+            _suggestions.addAll(generateWordPairs().take(10)); 
           }
           return _buildRow(_suggestions[index]);
         });
